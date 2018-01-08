@@ -1,0 +1,11 @@
+﻿{
+	"dependencies": {
+		"REStub.Console": "1.0.0-*",
+		"EnomStub.Console": "1.0.0-*",
+		"Domainr.Stub.Console": "1.0.0-*"
+	},
+	"frameworks": {
+		"net451": {
+		}
+	}
+}

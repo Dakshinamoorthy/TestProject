@@ -1,0 +1,26 @@
+﻿{
+  "version": "1.0.0-*",
+  "dependencies": {
+    "HtmlAgilityPack": "1.4.9.5",
+    "mbunit": "3.4.14",
+    "NLog.Config": "4.4.11",
+    "NPOI": "2.2.1",
+    "NUnitTestAdapter": "2.1.1",
+    "Selenium.Support": "2.53.0",
+    "Selenium.WebDriver": "2.53.0",
+    "NUnit": "2.6.4",
+    
+  },
+  "frameworks": {
+    "net452": {
+      "frameworkAssemblies": {
+        "System.Configuration": "4.0.0.0",
+        "System.Windows.Forms": "4.0.0.0"
+      }
+    }
+  },
+  "runtimes": {
+    "win": {},
+    "win-x64": {}
+  }
+}

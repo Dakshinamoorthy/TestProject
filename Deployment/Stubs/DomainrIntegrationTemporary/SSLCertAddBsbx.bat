@@ -1,0 +1,1 @@
+netsh http add sslcert ipport=0.0.0.0:5000 certhash=b57376b4d9385c8bc16b091002cc5623cdebe6c2 appid={4dc3e181-e14b-4a21-b022-59fc669b0914} certstorename=MY

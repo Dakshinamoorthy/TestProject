@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0E99DC50-5727-42C3-8914-8A51A200E99B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NamecheapUITests</RootNamespace>
+    <AssemblyName>NamecheapUITests</AssemblyName>
+    <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
+    <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BunifuUI, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\nc.tests\NamecheapUITests\ExternalPackage\BunifuUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Screenshots, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\nc.tests\NamecheapUITests\ExternalPackage\Screenshots.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.configuration">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Web.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.XML.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.Linq.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise />
+  </Choose>
+  <ItemGroup>
+    <Compile Include="BrowserInit.cs" />
+    <Compile Include="PagefactoryObject\PaymentProcessPageFactory\AccountFundspagefactory.cs" />
+    <Compile Include="PagefactoryObject\PaymentProcessPageFactory\AccountNavPageFactory.cs" />
+    <Compile Include="PagefactoryObject\PaymentProcessPageFactory\BillingPagefactory.cs" />
+    <Compile Include="PagefactoryObject\PaymentProcessPageFactory\CardPaymentPageFactory.cs" />
+    <Compile Include="PageObject\HelperPages\LoggerHelper.cs" />
+    <Compile Include="PageObject\HelperPages\MergeData.cs" />
+    <Compile Include="PageObject\HelperPages\VerifyData.cs" />
+    <Compile Include="PageObject\HelperPages\WinForm\Paypal\LivePaypalInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PageObject\HelperPages\WinForm\Paypal\LivePaypalInputForm.Designer.cs">
+      <DependentUpon>LivePaypalInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageObject\HelperPages\WinForm\Paypal\MyPreLoader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PageObject\HelperPages\WinForm\Paypal\MyPreLoader.Designer.cs">
+      <DependentUpon>MyPreLoader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageObject\HelperPages\WinForm\Paypal\Paypal.cs" />
+    <Compile Include="PageObject\HelperPages\WinForm\SecureCard\LiveCard.cs" />
+    <Compile Include="PageObject\HelperPages\WinForm\SecureCard\LiveCardDataPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PageObject\HelperPages\WinForm\SecureCard\LiveCardDataPreview.Designer.cs">
+      <DependentUpon>LiveCardDataPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageObject\HelperPages\WinForm\SecureCard\LiveCardInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PageObject\HelperPages\WinForm\SecureCard\LiveCardInputForm.Designer.cs">
+      <DependentUpon>LiveCardInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PagefactoryObject\CMSPageFactory\DomainsPageFactory\DomainsPageFactory.cs" />
+    <Compile Include="PagefactoryObject\CMSPageFactory\DomainsPageFactory\FreeDnspageFactory.cs" />
+    <Compile Include="PagefactoryObject\CMSPageFactory\DomainsPageFactory\MarketPlacePageFactory.cs" />
+    <Compile Include="PagefactoryObject\CMSPageFactory\DomainsPageFactory\TransferDomainPageFactory.cs" />
+    <Compile Include="PagefactoryObject\CMSPageFactory\DomainsPageFactory\WhoisLookupPagefactory.cs" />
+    <Compile Include="PagefactoryObject\CMSPageFactory\DomainsPageFactory\NewTldsPageFactory.cs" />
+    <Compile Include="PagefactoryObject\CMSPageFactory\Header\SupportLinksPageFactory.cs" />
+    <Compile Include="PagefactoryObject\CMSPageFactory\HostingPageFactory\DomainSelectionPageFactory.cs" />
+    <Compile Include="PagefactoryObject\CMSPageFactory\HostingPageFactory\HostingPageFactory.cs" />
+    <Compile Include="PagefactoryObject\CMSPageFactory\SecurityPageFactory\PremiumDnsPageFactory.cs" />
+    <Compile Include="PagefactoryObject\CMSPageFactory\SecurityPageFactory\SslCertificatePageFactory.cs" />
+    <Compile Include="PagefactoryObject\CMSPageFactory\SecurityPageFactory\WhoisGuardPageFactory.cs" />
+    <Compile Include="PagefactoryObject\CMSPageFactory\SupportPageFactory\ChatLinksPageFactory.cs" />
+    <Compile Include="PagefactoryObject\CMSPageFactory\SupportPageFactory\FooterPageFactory.cs" />
+    <Compile Include="PagefactoryObject\CMSPageFactory\SupportPageFactory\NcSearchPageFactory.cs" />
+    <Compile Include="PagefactoryObject\CMSPageFactory\SupportPageFactory\WebPageValidationPageFactory.cs" />
+    <Compile Include="PagefactoryObject\HelpersPageFactory\DomainSelectionPageFactory.cs" />
+    <Compile Include="PagefactoryObject\HelpersPageFactory\UpdateUserInfoPageFactory.cs" />
+    <Compile Include="PagefactoryObject\ValidationPagefactory\CartWidgetPageFactory.cs" />
+    <Compile Include="PagefactoryObject\ValidationPagefactory\ShoppingCartPageFactory.cs" />
+    <Compile Include="PageObject\CMSPages\DomainsPage\DomainsPage.cs" />
+    <Compile Include="PageObject\CMSPages\DomainsPage\FreeDnsPage.cs" />
+    <Compile Include="PageObject\CMSPages\DomainsPage\MarketPlacePage.cs" />
+    <Compile Include="PageObject\CMSPages\DomainsPage\NewTldsPage.cs" />
+    <Compile Include="PageObject\CMSPages\DomainsPage\TransferDomainPage.cs" />
+    <Compile Include="PageObject\CMSPages\DomainsPage\WhoisLookupPage.cs" />
+    <Compile Include="PageObject\CMSPages\Header\SupportLinksPage.cs" />
+    <Compile Include="PageObject\CMSPages\HostingPage\DomainSelectionPage.cs" />
+    <Compile Include="PageObject\CMSPages\HostingPage\HostingPage.cs" />
+    <Compile Include="PageObject\CMSPages\SecurityPage\PremiunDnsPage.cs" />
+    <Compile Include="PageObject\CMSPages\SecurityPage\SslCertificatePage.cs" />
+    <Compile Include="PageObject\CMSPages\SecurityPage\WhoisGuardPage.cs" />
+    <Compile Include="PageObject\CMSPages\SupportPage\ChatLinksPage.cs" />
+    <Compile Include="PageObject\CMSPages\SupportPage\FooterPage.cs" />
+    <Compile Include="PageObject\CMSPages\SupportPage\NcSearchPage.cs" />
+    <Compile Include="PageObject\CMSPages\SupportPage\WebPageValidationPage.cs" />
+    <Compile Include="PageObject\HelperPages\BrowserSetup.cs" />
+    <Compile Include="PageObject\HelperPages\ClearCart.cs" />
+    <Compile Include="PageObject\HelperPages\DataGenerator.cs" />
+    <Compile Include="PageObject\HelperPages\DataHelper.cs" />
+    <Compile Include="PageObject\HelperPages\ExceptionConstantHelper.cs" />
+    <Compile Include="PageObject\HelperPages\ExceptionType.cs" />
+    <Compile Include="PageObject\HelperPages\HostingDomainSelection.cs" />
+    <Compile Include="PageObject\HelperPages\LoginPageHelper.cs" />
+    <Compile Include="PageObject\HelperPages\PageValidationHelper.cs" />
+    <Compile Include="PageObject\HelperPages\PaymentProcess\AccountFundsPayment.cs" />
+    <Compile Include="PageObject\HelperPages\PaymentProcess\AccountNav.cs" />
+    <Compile Include="PageObject\HelperPages\PaymentProcess\BillingNav.cs" />
+    <Compile Include="PageObject\HelperPages\PaymentProcess\CardPayment.cs" />
+    <Compile Include="PageObject\HelperPages\PaymentProcess\DoneNav.cs" />
+    <Compile Include="PageObject\HelperPages\PaymentProcess\OrderNav.cs" />
+    <Compile Include="PageObject\HelperPages\PaymentProcess\OrderProcessing.cs" />
+    <Compile Include="PageObject\HelperPages\PaymentProcess\PaypalPayment.cs" />
+    <Compile Include="PageObject\HelperPages\PaymentProcess\PurchaseFlow.cs" />
+    <Compile Include="PageObject\HelperPages\PaymentProcess\SetupNav.cs" />
+    <Compile Include="PageObject\HelperPages\RandomDomainNameGenerator.cs" />
+    <Compile Include="PageObject\HelperPages\SldGenerator.cs" />
+    <Compile Include="PageObject\HelperPages\UiConstantHelper.cs" />
+    <Compile Include="PageObject\HelperPages\UrlNavigationHelper.cs" />
+    <Compile Include="PageObject\HelperPages\UserPersonalDataGenetrator.cs" />
+    <Compile Include="PageObject\HelperPages\UtilityHelper.cs" />
+    <Compile Include="PageObject\HelperPages\WrapperFactory\AppConfigHelper.cs" />
+    <Compile Include="PageObject\HelperPages\WrapperFactory\EnumHelper.cs" />
+    <Compile Include="PageObject\HelperPages\WrapperFactory\ExcelDataHelper.cs" />
+    <Compile Include="PageObject\HelperPages\WrapperFactory\PageInitHelper.cs" />
+    <Compile Include="PageObject\HelperPages\WrapperFactory\PageNavigationHelper.cs" />
+    <Compile Include="PageObject\HelperPages\WrapperFactory\TestFinalizerHelper.cs" />
+    <Compile Include="PageObject\HelperPages\WrapperFactory\TimeSpanHelper.cs" />
+    <Compile Include="PageObject\HelperPages\WrapperFactory\UserInfoUpdationHelper.cs" />
+    <Compile Include="PageObject\Interface\AGeoLocationFinder.cs" />
+    <Compile Include="PageObject\Interface\AMerge.cs" />
+    <Compile Include="PageObject\Interface\APurchaseSummaryPageValidation.cs" />
+    <Compile Include="PageObject\Interface\AUserInfoUpdation.cs" />
+    <Compile Include="PageObject\Interface\AVerify.cs" />
+    <Compile Include="PageObject\Interface\ICartValidation.cs" />
+    <Compile Include="PageObject\Interface\ICheckoutNav.cs" />
+    <Compile Include="PageObject\Interface\IDomainListValidation.cs" />
+    <Compile Include="PageObject\Interface\IDomainSelectOptions.cs" />
+    <Compile Include="PageObject\Interface\IOrdersValidation.cs" />
+    <Compile Include="PageObject\Interface\IPaymentMethod.cs" />
+    <Compile Include="PageObject\Interface\IShoppingCartValidation.cs" />
+    <Compile Include="PageObject\Interface\ITransactionValidation.cs" />
+    <Compile Include="PageObject\ValidationPages\AddProductShoppingCartItems.cs" />
+    <Compile Include="PageObject\ValidationPages\AddSslShoppingCartItems.cs" />
+    <Compile Include="PageObject\ValidationPages\DomainListCartValidation.cs" />
+    <Compile Include="PageObject\ValidationPages\SslProductListValidation.cs" />
+    <Compile Include="PageObject\ValidationPages\ValidateDomainOrderInBillingPage.cs" />
+    <Compile Include="PageObject\ValidationPages\ValidateHostingOrderInBillingPage.cs" />
+    <Compile Include="PageObject\ValidationPages\ValidateProductsInDomainList.cs" />
+    <Compile Include="PageObject\ValidationPages\ProductListCartValidation.cs" />
+    <Compile Include="PageObject\ValidationPages\ValidatePurchaseSummary.cs" />
+    <Compile Include="PageObject\ValidationPages\ValidateSslOrderInBillingPage.cs" />
+    <Compile Include="PageObject\ValidationPages\ValidatingDomainTransationDetails.cs" />
+    <Compile Include="PageObject\ValidationPages\WebPageResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\CMS\Domains\DomainNameSearch.cs" />
+    <Compile Include="Test\CMS\Domains\FreeDns.cs" />
+    <Compile Include="Test\CMS\Domains\MarketPlace.cs" />
+    <Compile Include="Test\CMS\Domains\NewTlds.cs" />
+    <Compile Include="Test\CMS\Domains\Transfer.cs" />
+    <Compile Include="Test\CMS\Domains\Whois.cs" />
+    <Compile Include="Test\CMS\Header\SupportLinks.cs" />
+    <Compile Include="Test\CMS\Hosting\Hosting.cs" />
+    <Compile Include="Test\CMS\PaymentScenerio\AllPaymentMode.cs" />
+    <Compile Include="Test\CMS\Security\PremiumDns.cs" />
+    <Compile Include="Test\CMS\Security\SslCertificates.cs" />
+    <Compile Include="Test\CMS\Security\WhoisGuard.cs" />
+    <Compile Include="Test\CMS\Support\ChatLinks.cs" />
+    <Compile Include="Test\CMS\Support\Footer.cs" />
+    <Compile Include="Test\CMS\Support\NcSearch.cs" />
+    <Compile Include="Test\CMS\Support\NewUserSignUp.cs" />
+    <Compile Include="Test\CMS\Support\WebPageValidation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App.config.template" />
+    <None Include="project.json" />
+    <None Include="Resources\Carbon14_Labeler.ttf" />
+    <None Include="Resources\HELR45W.ttf" />
+    <None Include="Resources\helvetica.ttf" />
+    <None Include="Resources\HYDRO-Light.ttf" />
+    <None Include="Resources\OCRAEXT.TTF" />
+    <None Include="Resources\wormbox_sharp.ttf" />
+    <None Include="UiConstantHelperList.xls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PagefactoryObject\AccountPanelPageFactory\" />
+    <Folder Include="PageObject\AccountPanelPages\" />
+    <Folder Include="Test\AccountPanel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowAusgeschnitten.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PageObject\HelperPages\WinForm\Paypal\LivePaypalInputForm.resx">
+      <DependentUpon>LivePaypalInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageObject\HelperPages\WinForm\Paypal\MyPreLoader.resx">
+      <DependentUpon>MyPreLoader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageObject\HelperPages\WinForm\SecureCard\LiveCardDataPreview.resx">
+      <DependentUpon>LiveCardDataPreview.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageObject\HelperPages\WinForm\SecureCard\LiveCardInputForm.resx">
+      <DependentUpon>LiveCardInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ExternalPackage\BunifuUI.dll" />
+    <Content Include="ExternalPackage\Screenshots.dll" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

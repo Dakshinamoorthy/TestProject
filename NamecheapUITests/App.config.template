@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+			<section name="ApiCredentials" type="Namecheap.Api.Proxy.Config.ApiCredentialsConfigurationHandler, Namecheap.Api.Proxy"/>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="DomainUiLive.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+  <connectionStrings>
+    <add name="NamecheapCore" connectionString="{{ncCoreCs}}" />
+    <add name="NamecheapCoreCms" connectionString="{{ncCoreCmsCs}}" />
+    <add name="NamecheapTests" connectionString="{{ncTestsCs}}" />
+    <!--mysql-->
+    <add name="oxpostfixdbEntities" connectionString="metadata=res://*/PostfixMySqlDB.csdl|res://*/PostfixMySqlDB.ssdl|res://*/PostfixMySqlDB.msl;provider=MySql.Data.MySqlClient;provider connection string='server=198.154.102.224;User Id=root;password=&quot;bYbCTH1boeVhNiYs&quot;;Persist Security Info=True;database=oxpostfixdb'" providerName="System.Data.EntityClient" />
+  </connectionStrings>
+
+	<appSettings>
+    <add key="MainUrl" value="{{cmsSiteUrl}}"/>
+    <add key="PathToAPIv2" value="http://{{apiSiteUrl}}:808"/>
+    <add key="ClientIP" value="{{uiAutomationTests.ClientIP | downcase }}"/>
+	
+	  <add key="CmsServerInstance" value=""/>
+    <add key="ApServerInstance" value=""/>
+	
+	  <!--Mention RM to provide the proper result screenshot-->
+    <add key="RM" value="RM-943"/>
+	
+	  <!--Mention Y or N  for signup as a new user for production to run add to cart signup test-->
+	  <add key="NewUserSignupinProduction" value="N"/>
+
+    <!--Purchase Using Live PayPal Set Value = Y else Value =N-->
+    <add key="LivePaypal" value="N"/>
+
+    <!--Purchase Using Live Card Set Value = Y else Value =N-->
+    <add key="LiveCard" value="Y"/>
+        
+	  <add key="UserName" value="{{uiAutomationTests.user }}"/>
+    <add key="Password" value="{{uiAutomationTests.pwd }}"/>
+
+    <add key="AdminLogin" value="Admin"/>
+    <add key="AdminPassword" value="1"/>
+
+    <!-- Used for SB and PROD only. -->
+    <add key="DomainName" value="{{uiAutomationTests.DomainName | downcase }}"/>
+    <add key="PeSubscriptionId" value="{{uiAutomationTests.PeSubscriptionId | downcase }}"/>
+    <add key="SslCertId" value="{{uiAutomationTests.SslCertId | downcase }}"/>
+
+		<add key="PayPalUrl" value="{{uiAutomationTests.PayPalUrl | downcase }}"/>
+    <add key="PayPalEmail" value="payments-facilitator-2@namecheap.com"/>
+    <add key="PayPalPassword" value="xqA3bejExqA3bejE"/>
+
+    <!--card (or) paypal (or) funds-->
+    <add key="PaymentMethod" value="card"/>
+
+    <!-- value="" for Existing Card (or) value="AddNewCard" for New Card-->
+    <add key ="AddNewCard" value="" />
+
+    <!-- Adding New Card Details for Payment -->
+    <add key ="NameOnCard" value="AQA"/>
+    <add key ="CardNumber" value="5555555555554444"/>
+    <add key ="CardCVV2" value="411"/>
+    <add key ="CardExpiryMonth" value="12"/>
+    <add key ="CardExpiryYear" value="2020"/>
+    
+    <add key="ScreenFolder" value="{{uiAutomationTests.ScreenFolder }}"/>
+
+    <!--Failed Cases Log-->
+    <add key="LoggerFolder" value="{{uiAutomationTests.LoggerFolder }}" />
+    
+	<add key ="ChromeDriverFolder" value="D:\\ProjectRelated\\ChromeDriver"/>
+    
+    <!--Failed Cases Log-->
+    <add key="LoggerFolder" value="D:\Auto-Test Results" />
+
+    <!-- TestRail Integration -->
+    <add key="AssemblyPath" value="NCSmoketest.dll"/>
+    <add key="testRail.Url" value="http://testrail.namecheap.net/index.php"/>
+    <add key="testRail.UserName" value="artyom.v@namecheap.com"/>
+    <add key="testRail.Password" value="t9VOhh4NsquXBOEwdCOK-IBuYFJOioucnek6XCT5D" />
+    <add key="testRail.CustomAttribute.Tag" value="custom_short_t" />
+    <add key="testRail.CustomAttribute.Automation" value="custom_automation" />
+
+    <add key="teamCity.URL" value="http://tc.branches.namecheap.com:8080" />
+
+  </appSettings>
+	
+	<ApiCredentials
+     HttpXMLResponse="http://{{apiSiteUrl}}:808/xml.response"
+     MaxSearchLength="600"
+     AppUser="ncmobile"
+  KeyVersion="v1"
+  AppKey="D507BD6802654F16B672CDE48462E95E"
+  PrivateKey="w*2#DvB%5@Naf7%!lC1rs^+p"
+  IvVecror="v2Qj7Cs5"
+  MasterPassword="abc123"/>
+
+</configuration>

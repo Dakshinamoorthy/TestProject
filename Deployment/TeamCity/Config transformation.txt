@@ -1,0 +1,13 @@
+----- Auto tests
+
+_buildConfigs.bat %configForType% %configForAutotests%
+_buildConfigs.bat BSBs .autotests
+D:\Websites\Deployment\_buildConfigs.bat BSBs .autotests
+
+
+
+----- Sandbox
+
+buildConfigs.bat %configForType% %configForSandbox%
+_buildConfigs.bat BSBs .sandbox
+D:\Websites\Deployment\_buildConfigs.bat BSBs .sandbox

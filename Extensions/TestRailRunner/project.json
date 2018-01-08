@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "emitEntryPoint": true,
+    "copyToOutput": [ "nlog.config" ]
+  },
+
+  "dependencies": {
+    "Api": "1.0.0-*",
+    "Newtonsoft.Json": "10.0.2",
+    "NLog": "5.0.0-beta06",
+    "Test.BO": "1.0.0-*",
+    "TestRail": "1.0.0.12",
+    "Ui": "1.0.0-*"
+  },
+
+  "frameworks": {
+    "net452": {
+      "frameworkAssemblies": {
+        "System.Configuration": "4.0.0.0"
+      }
+    }
+  },
+  "publishOptions": {
+    "include": [
+      "nlog.config"
+    ]
+  }
+}
